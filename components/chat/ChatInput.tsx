@@ -10,7 +10,7 @@ interface Props { onSend: (msg: string) => void; loading: boolean; streaming: bo
 export default function ChatInput({ onSend, loading, streaming }: Props) {
   const [input, setInput] = useState("");
   const [listening, setListening] = useState(false);
-  const recogRef = useRef<SpeechRecognition | null>(null);
+  const recogRef = useRef<any>(null);
 
   const send = () => {
     if (!input.trim() || loading) return;
