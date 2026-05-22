@@ -20,8 +20,8 @@ export default function ChatInput({ onSend, loading, streaming }: Props) {
 
   const toggleVoice = () => {
     const SR =
-      (window as unknown as { SpeechRecognition?: typeof SpeechRecognition }).SpeechRecognition ||
-      (window as unknown as { webkitSpeechRecognition?: typeof SpeechRecognition }).webkitSpeechRecognition;
+      (window as any).SpeechRecognition ||
+      (window as any).webkitSpeechRecognition
     if (!SR) { toast.error("Voice not supported in this browser"); return; }
     if (listening) { recogRef.current?.stop(); setListening(false); return; }
     const r = new SR();
