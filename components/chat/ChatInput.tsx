@@ -27,7 +27,7 @@ export default function ChatInput({ onSend, loading, streaming }: Props) {
     const r = new SR();
     r.continuous = false;
     r.interimResults = true;
-    r.onresult = (e: SpeechRecognitionEvent) =>
+    r.onresult = (e: any) =>
       setInput(Array.from(e.results).map((x) => x[0].transcript).join(""));
     r.onend = () => setListening(false);
     r.start();
