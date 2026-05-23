@@ -3,7 +3,8 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+const SyntaxHighlighter: any =
+  require("react-syntax-highlighter").Prism;
 import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { Copy, Check, RotateCcw, User, Sparkles, AlertTriangle } from "lucide-react";
 import { Message } from "@/lib/types";
