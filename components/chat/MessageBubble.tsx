@@ -108,6 +108,7 @@ export default function MessageBubble({ msg, isLast, onRegenerate }: Props) {
                               Copy
                             </button>
                           </div>
+                          // @ts-ignore
                           <SyntaxHighlighter
                             style={vscDarkPlus as Record<string, React.CSSProperties>}
                             language={match[1]}
